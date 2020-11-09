@@ -58,7 +58,7 @@ public class User extends JFrame implements ActionListener{
       p2 = new JPanel();
       p2.setBackground(Color.black);
       p2.setSize(500,50);
-      p2.setLocation(0,611);
+      p2.setLocation(0,650);
       p2.setLayout(null);
       main.add(p2);
        
