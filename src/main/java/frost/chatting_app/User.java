@@ -17,7 +17,12 @@ public class User extends JFrame implements ActionListener{
     JPanel main; // should be frame size;, add everything to main now not frame
     JPanel p1;
     JPanel p2;
-    JSplitPane splitPane; // gotta split, to use 2 panel
+    JTextField t1;
+    JTextArea ta1;
+    
+    
+    
+   // JSplitPane splitPane; // gotta split, to use 2 panel
    User()
    {    /*main panel prop----------------------------------------------------------------------------------------------------------------------
    ----------------------------------------------------------------------------------------------------------------------------------*/
@@ -38,7 +43,7 @@ public class User extends JFrame implements ActionListener{
        /*panel1 prop----------------------------------------------------------------------------------------------------------------------
    ----------------------------------------------------------------------------------------------------------------------------------*/
        p1 = new JPanel();
-       p1.setBackground(Color.red);
+       p1.setBackground(new Color(156, 81, 182));//(148,0,211),(156,81,182) 75,0,130)
        p1.setSize(500,50);
        p1.setLocation(0,0);
        p1.setLayout(null);
@@ -56,7 +61,7 @@ public class User extends JFrame implements ActionListener{
        /*panel2 prop----------------------------------------------------------------------------------------------------------------------
    ----------------------------------------------------------------------------------------------------------------------------------*/
       p2 = new JPanel();
-      p2.setBackground(Color.black);
+      p2.setBackground(new Color(156, 81, 182));
       p2.setSize(500,50);
       p2.setLocation(0,650);
       p2.setLayout(null);
@@ -64,7 +69,41 @@ public class User extends JFrame implements ActionListener{
        
        /*panel2 prop----------------------------------------------------------------------------------------------------------------------
    ----------------------------------------------------------------------------------------------------------------------------------*/
-       //splitPane = new JSplitPane(JSplitPane.VERTICAL_SPLIT, p1, p2); 
+       
+/*textfield prop----------------------------------------------------------------------------------------------------------------------
+   ----------------------------------------------------------------------------------------------------------------------------------*/
+
+t1= new JTextField();
+t1.setSize(370,30);
+t1.setLocation(10,10);
+t1.setLayout(null);
+p2.add(t1);
+
+/*textfield prop----------------------------------------------------------------------------------------------------------------------
+   ----------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*textarea prop----------------------------------------------------------------------------------------------------------------------
+   ----------------------------------------------------------------------------------------------------------------------------------*/
+ta1 = new JTextArea();
+ta1.setSize(480,590);
+ta1.setLayout(null);
+ta1.setLocation(10,55);
+ta1.setBackground(Color.pink);
+main.add(ta1);
+
+
+
+
+/*textarea prop----------------------------------------------------------------------------------------------------------------------
+   ----------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+//splitPane = new JSplitPane(JSplitPane.VERTICAL_SPLIT, p1, p2); 
        
       /*back icon----------------------------------------------------------------------------------------------------------------------
    ----------------------------------------------------------------------------------------------------------------------------------*/
@@ -110,7 +149,8 @@ public class User extends JFrame implements ActionListener{
     Image icon3rescale = icon3.getImage().getScaledInstance(30, 30, Image.SCALE_DEFAULT); //imagescale
     ImageIcon i3 = new ImageIcon(icon3rescale);// calling constructor 
     JLabel label3= new JLabel(i3);
-    label3.setBounds(370, 450, 750, 19);//posx,posy,width,height
+    //label3.setBounds(400, 10, 750, 19);//pos x, pos y, width , height
+    label3.setBounds(430, 0, 50, 50);
     p2.add(label3);
     //send icon --------------------------------------------------------------------------------------------------
     
@@ -128,10 +168,11 @@ public class User extends JFrame implements ActionListener{
        
    /*frame prop----------------------------------------------------------------------------------------------------------------------
    --------------------------------------------------------------------------------------------------------------------------------*/
-  // getContentPane().setBackground(Color.blue);//getContenpane gets the full Jframe
+  //getContentPane().setBackground(Color.black);//getContenpane gets the full Jframe
    setSize(500,700);
    setLayout(null);
    setLocation(0,0);
+   main.setBackground(Color.white);
    add(main);
    
    setUndecorated(true);
