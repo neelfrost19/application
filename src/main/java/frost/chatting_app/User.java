@@ -93,6 +93,7 @@ ta1.setBackground(Color.pink);
 ta1.setEditable(false);
 ta1.setLineWrap(true); // line wrap
 ta1.setWrapStyleWord(true); //style wrap
+
 main.add(ta1);
 
 
