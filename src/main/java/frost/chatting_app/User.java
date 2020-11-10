@@ -90,7 +90,11 @@ ta1.setSize(480,590);
 ta1.setLayout(null);
 ta1.setLocation(10,55);
 ta1.setBackground(Color.pink);
+ta1.setEditable(false);
+ta1.setLineWrap(true); // line wrap
+ta1.setWrapStyleWord(true); //style wrap
 main.add(ta1);
+
 
 
 
@@ -158,6 +162,8 @@ main.add(ta1);
     label3.addMouseListener(new MouseAdapter(){public void mouseClicked(MouseEvent e)
             {
                 //System.exit(0);
+               ta1.setText(ta1.getText()+"\n\t\t\t"+t1.getText());
+               t1.setText(" ");
             } });
     //send icon task----------------------------------------------------------------------------------------------
      
